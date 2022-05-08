@@ -40,6 +40,7 @@ html {
     display: flex;
     justify-content: center;
     margin: 25px 0;
+    position: relative;
 }
 
 .cover__img {
@@ -49,6 +50,18 @@ html {
     width: 250px;
     height: 250px;
     border-radius: 50%;
+}
+
+.cover::after {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: #EFF3F5;
+    border-radius: 50%;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .cover__img.active {
